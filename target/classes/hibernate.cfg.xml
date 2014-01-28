@@ -2,21 +2,23 @@
 "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 
-        <hibernate-configuration>
+<hibernate-configuration>
   <session-factory>
     <property name="hibernate.connection.url">
-       jdbc:hsqldb:file:testdb;shutdown=true
+      jdbc:hsqldb:file:testdb;shutdown=true
     </property>
     <property name="hibernate.connection.driver_class">
-       org.hsqldb.jdbcDriver
+      org.hsqldb.jdbcDriver
     </property>
     <property name="hibernate.connection.username">sa</property>
     <property name="hibernate.connection.password"></property>
     <property name="hibernate.connection.pool_size">0</property>
     <property name="hibernate.dialect">
-       org.hibernate.dialect.HSQLDialect
+      org.hibernate.dialect.HSQLDialect
     </property>
+
     <property name="hibernate.show_sql">false</property>
+    <property name="hbm2ddl.auto">create-drop</property>
 
     <!-- "Import" the mapping resources here -->
     <mapping class="sample.entity.Message"/>
