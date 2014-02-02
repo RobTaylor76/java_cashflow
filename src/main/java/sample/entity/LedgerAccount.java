@@ -1,19 +1,16 @@
 package sample.entity;
 
-import java.util.HashSet;
-import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import org.hibernate.annotations.Filter;
 
 @Entity
 @Table(name = "ledger_accounts")
-@Filter(name="userFilter", condition=":userParam = user_id")
+@Filter(name="userFilter", condition=":userId = user_id")
 public class LedgerAccount {
   private long id;
   private String name;
@@ -47,7 +44,7 @@ public class LedgerAccount {
 
   @Id
   @GeneratedValue
-  protected long getId() {
+  public long getId() {
     return id;
   }
 

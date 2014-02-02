@@ -8,7 +8,15 @@
   </class>
   -->
   <filter-def name='userFilter'>
-    <filter-param name="userParam" type="long"/>
+    <filter-param name="userId" type="long"/>
   </filter-def>
+  <filter-def name='ledgerFilter'>
+    <filter-param name="ledgerId" type="long"/>
+  </filter-def>  
+  <filter-def name='dateRangeFilter'>
+    <filter-param name="fromDate" type="date"/>
+    <filter-param name="toDate" type="date"/>
+  </filter-def>   
+  
 </hibernate-mapping>
 
