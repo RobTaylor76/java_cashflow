@@ -1,50 +1,41 @@
-    package sample.entity;
+package sample.entity;
 
-    import javax.persistence.Column;
-    import javax.persistence.Entity;
-    import javax.persistence.GeneratedValue;
-    import javax.persistence.Id;
-    import javax.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-    @Entity
-    @Table (name="AdUser")
-    public class User {
-       private long id;
-       private String name;
-       private String password;
+@Entity
+@Table(name="users")
+public class User {
+  private long id;
+  private String email;
 
-       public User(String name, String password) {
-          this.name = name;
-          this.password = password;
-       }
+  public User(String email) {
+    this.email = email;
+  }
 
-       User() {
-       }
+  User() {
+  }
 
-       @Column(unique=true)
-       public String getName() {
-          return name;
-       }
+  @Column(unique=true)
+  public String getEmail() {
+    return email;
+  }
 
-       public void setName(String name) {
-          this.name = name;
-       }
+  public void setEmail(String email) {
+    this.email = email;
+  }
 
-       public String getPassword() {
-          return password;
-       }
 
-       public void setPassword(String password) {
-          this.password = password;
-       }
+  @Id
+  @GeneratedValue
+public long getId() {
+    return id;
+  }
 
-       @Id
-       @GeneratedValue
-       protected long getId() {
-          return id;
-       }
-
-       protected void setId(long id) {
-          this.id = id;
-       }
-    }
+  protected void setId(long id) {
+    this.id = id;
+  }
+}
