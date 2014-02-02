@@ -31,7 +31,7 @@ public class User {
 
   @Id
   @GeneratedValue
-public long getId() {
+  public long getId() {
     return id;
   }
 

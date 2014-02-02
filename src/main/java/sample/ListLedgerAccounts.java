@@ -28,8 +28,6 @@ public class ListLedgerAccounts {
       System.out.println(user.getEmail());
       // Filter by user
       Filter filter = session.enableFilter("userFilter");
-
-      FilterDefinition def = filter.getFilterDefinition();
       
       filter.setParameter("userParam", user.getId());
       
