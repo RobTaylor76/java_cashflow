@@ -12,11 +12,11 @@
   </filter-def>
   <filter-def name='ledgerFilter'>
     <filter-param name="ledgerId" type="long"/>
-  </filter-def>  
+  </filter-def>
   <filter-def name='dateRangeFilter'>
     <filter-param name="fromDate" type="date"/>
-    <filter-param name="toDate" type="date"/>
-  </filter-def>   
+    <filter-param name="toDate" type="date"/> 
+  </filter-def>
   
 </hibernate-mapping>
 

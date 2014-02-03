@@ -23,6 +23,7 @@
     <!-- "Import" the mapping resources here -->
     <mapping class="sample.entity.BankAccount"/>
     <mapping class="sample.entity.LedgerAccount"/>
+    <mapping class="sample.entity.LedgerEntry"/>
     <mapping class="sample.entity.User"/>
 
 
